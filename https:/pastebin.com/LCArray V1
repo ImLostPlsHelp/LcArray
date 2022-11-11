@@ -1,0 +1,32 @@
+package io;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class lcarray {
+    public static void main(String[] args) {
+        Scanner lc = new Scanner(System.in);
+
+        int[] angka = new int[4];
+        int maksimum = 0;
+        int minimum = 0;
+        int total = 0;
+        int rata2 = 0;
+
+        for (int i = 0; i < angka.length; i++) {
+            angka[i] = lc.nextInt();
+            maksimum = Arrays.stream(angka).max().getAsInt();
+            minimum = Arrays.stream(angka).min().getAsInt();
+            total = total + angka[i];
+            rata2 = total / angka.length;
+
+        }
+
+        System.out.println(Arrays.toString(angka));
+        System.out.println(maksimum);
+        System.out.println(minimum);
+        System.out.println(rata2);
+    }
+
+    
+}
+
